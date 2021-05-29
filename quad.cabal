@@ -44,7 +44,29 @@ executable quad
               -with-rtsopts=-N
   build-depends: base >=4.0 && <5
                , quad
-               , rio    
+               , rio
+
+test-suite quad-tests
+  type:                     exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs: test
+  ghc-options:
+    -threaded
+    -rtsopts
+    -with-rtsopts=-N
+  build-depends:
+     quad
+   , hspec
+   , rio
+   , base >=4.0 && <5
+  default-extensions:
+     OverloadedStrings
+     BlockArguments
+     DeriveAnyClass
+     DeriveGeneric
+     LambdaCase
+     NoImplicitPrelude
+     StrictData
                
                
               
