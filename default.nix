@@ -2,6 +2,23 @@
 , stdenv
 , base
 , haskell-language-server
+, aeson
+, async
+, butcher
+, hslogger
+, http-client
+, http-conduit
+, network
+, record-hasfield
+, rio
+, scotty
+, serialise
+, stm
+, time
+, typed-process
+, wai-cors
+, yaml
+, record-dot-preprocessor  
 }:
 
 mkDerivation {
@@ -12,6 +29,23 @@ mkDerivation {
   isExecutable = true;
   executableHaskellDepends = [
     base
+    aeson
+    async
+    butcher
+    hslogger
+    http-client
+    http-conduit
+    network
+    record-hasfield
+    rio
+    scotty
+    serialise
+    stm
+    time
+    typed-process
+    wai-cors
+    yaml
+    record-dot-preprocessor
   ];
   buildTools = [
     haskell-language-server
