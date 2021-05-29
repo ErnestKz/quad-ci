@@ -1,0 +1,8 @@
+- Sandboxed builds in Docker containers
+- Multi-mode architecture with agents picking up jobs to work on
+- An HTTP API to interact with the frontend and other nodes
+- Support for triggering builds with github webhooks
+
+  
+- docker
+
