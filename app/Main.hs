@@ -1,6 +1,6 @@
 module Main where
 
-import           QuadCi.Hello
+import           Core
 import           RIO
 
-main = hello
+main = a
