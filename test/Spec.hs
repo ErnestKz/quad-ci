@@ -4,12 +4,13 @@ import           RIO
 import qualified RIO.NonEmpty.Partial as NonEmpty.Partial
 
 import           Core
+import qualified Docker
 
 
 makeStep :: Text -> Text -> [Text] -> Step
 makeStep name image commands
   = Step { name = StepName name
-         , image = Image image
+         , image = Docker.Image image
          , commands = NonEmpty.Partial.fromList commands
          }
 
@@ -26,6 +27,7 @@ testBuild :: Build
 testBuild = Build
  { pipeline = testPipeline
  , state = BuildReady
+ , completedSteps = mempty
  }
 
 main :: IO ()
